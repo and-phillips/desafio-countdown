@@ -1,0 +1,144 @@
+:root{
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+    --background: #e5e5e5;
+}
+
+
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {  
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.5rem;
+}
+
+.timer-cont{
+    flex-basis: 55%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-cont h1{
+    font-size: 2.25rem;
+    letter-spacing: 3px;
+    color: var(--purple);
+    margin-bottom: 1rem;
+}
+
+.timer-cont p{
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.timer-cont .timer{
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.timer-cont .timer span{
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.timer-cont .timer .time{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-cont .timer .time small {
+    color: var(--light-grey);
+}
+
+.timer-cont .timer .time h2 {
+    font-size: 4rem;
+    font-weight: normal;
+    color: var(--black);
+}
+
+.button{
+    background-color: var(--purple);
+    color: var(--background);
+    border: none;
+    box-shadow: 0px 1px 5px var(--black);
+    cursor: pointer;
+}
+  
+.button:hover {
+    background-color: #5d55f3;
+    box-shadow: none;
+}
+  
+.submit {
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+}
+  
+.img-cont .image img {
+    width: 100%;
+}
+
+
+@media (max-width: 1020px) {
+    .timer-cont .timer {
+      gap: 1rem;
+    }
+  
+    .timer-cont .timer span,
+    .timer-cont .timer .time h2 {
+      font-size: 3rem;
+    }
+}
+  
+@media (max-width: 968px) {
+    body {
+      overflow: auto;
+    }
+  
+    .container {
+      flex-direction: column;
+    }
+  
+    .timer-cont .timer .time {
+      width: 100%;
+    }
+}
+  
+@media (max-width: 385px) {
+    .timer-cont .timer {
+      gap: 0.5rem;
+    }
+}
+  
+@media (max-width: 335px) {
+    .timer-cont .timer {
+      flex-direction: column;
+    }
+  
+    .timer-cont .timer span {
+      display: none;
+    }
+}
